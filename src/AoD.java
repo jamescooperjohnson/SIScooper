@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class AoD {
 
 	
-	public static ArrayList<Student> loadStudents(ArrayList<Student> List) throws FileNotFoundException
+	public static ArrayList<Student> Students(ArrayList<Student> List) throws FileNotFoundException
 	{
 		
 		String first = null;
@@ -47,7 +47,7 @@ public class AoD {
 	}
 	public static void pList(ArrayList<Student> List)
 	{
-		for(int i = 0; i < List.size(); i++)   
+		for(int i = 1; i < List.size(); i++)   
 		    System.out.println(List.get(i).getFirst() + " " + List.get(i).getLast());
 		
 		System.out.println();
@@ -55,7 +55,7 @@ public class AoD {
 	
 	
 	
-	public static ArrayList<Student> addDelMenu(ArrayList<Student> List) throws FileNotFoundException
+	public static ArrayList<Student> aoD(ArrayList<Student> List) throws FileNotFoundException
 	{
 		int choice = 0;
 		

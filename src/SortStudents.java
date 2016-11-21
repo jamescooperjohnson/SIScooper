@@ -22,7 +22,7 @@ public class SortStudents
 			}
 			else if(choice == 2)
 			{
-				//add sort by gpa
+				Collections.sort(List, new sortByGpa());
 				CalcGPA.printClassGpa(List);
 			}
 			else if (choice == 3)

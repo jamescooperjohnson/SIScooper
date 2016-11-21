@@ -11,7 +11,7 @@ public class Runner {
 		
 		ArrayList<Student> StudentList = new ArrayList<Student>();
 
-		StudentList = AoD.loadStudents(StudentList);
+		StudentList = AoD.Students(StudentList);
 		
 		StudentList = CalcGPA.calcGPA(StudentList);
 		
@@ -38,7 +38,7 @@ public class Runner {
 
 		switch(menu){
 	    case 1:
-	    	List = AoD.addDelMenu(List);
+	    	List = AoD.aoD(List);
 	       break;
 	    case 2:
 	    	List = ChangeGrade.chgGrade(List);
