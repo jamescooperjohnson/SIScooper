@@ -5,8 +5,19 @@ public class ChangeGrade
 {
 	public static void printClassList(ArrayList<Student> List)
 	{
-		for(int i = 0; i < List.size(); i++)   
+		for(int i = 1; i < List.size(); i++)   
 		    System.out.println(i + " " + List.get(i).getFirst() + " " + List.get(i).getLast() + " " 
+		                         + List.get(i).getClass1() + " " + List.get(i).getGrade1() + " " 
+		    		             + List.get(i).getClass2() + " " + List.get(i).getGrade2() + " " 
+		                         + List.get(i).getClass3() + " " + List.get(i).getGrade3() 
+		                      );
+		    		           
+	}
+	
+	public static void pList(ArrayList<Student> List)
+	{
+		for(int i = 0; i < List.size(); i++)   
+		    System.out.println(List.get(i).getFirst() + " " + List.get(i).getLast() + " " 
 		                         + List.get(i).getClass1() + " " + List.get(i).getGrade1() + " " 
 		    		             + List.get(i).getClass2() + " " + List.get(i).getGrade2() + " " 
 		                         + List.get(i).getClass3() + " " + List.get(i).getGrade3() 

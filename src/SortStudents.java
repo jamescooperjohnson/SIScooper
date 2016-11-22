@@ -1,12 +1,16 @@
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 
 public class SortStudents
 	{
 
-	public static ArrayList<Student> sortMenu(ArrayList<Student> List){
+	private static final ArrayList<Student> StudentList = null;
+
+	public static ArrayList<Student> sortMenu(ArrayList<Student> List) throws FileNotFoundException{
 		
 		int choice = 0;
         
@@ -27,12 +31,14 @@ public class SortStudents
 			}
 			else if (choice == 3)
 		    {
-				//add sort by class
-				ChangeGrade.printClassList(List);
+				Collections.sort(List, new sortbyClass());
+				ChangeGrade.pList(List);
 			}
 			
 		
 		return List;	
 	}
+
+	
 	
 }

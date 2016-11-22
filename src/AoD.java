@@ -40,7 +40,7 @@ public class AoD {
 	}
 	public static void printList(ArrayList<Student> List)
 	{
-		for(int i = 0; i < List.size(); i++)   
+		for(int i = 1; i < List.size(); i++)   
 		    System.out.println(i + " " + List.get(i).getFirst() + " " + List.get(i).getLast());
 		
 		System.out.println();
