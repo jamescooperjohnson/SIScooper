@@ -13,7 +13,6 @@ public class ChangeGrade
 		                      );
 		    		           
 	}
-	
 	public static void pList(ArrayList<Student> List)
 	{
 		for(int i = 0; i < List.size(); i++)   
@@ -39,7 +38,8 @@ public class ChangeGrade
 			}
 			else if(choice == 2)
 			{
-				//add change class
+				
+				List = classChange(List);
 			}
 			
 		
@@ -48,6 +48,7 @@ public class ChangeGrade
     }
     
 	
+
 	public static ArrayList<Student> gradeChange(ArrayList<Student> List)
 	{
 		int Student = 0;
@@ -95,7 +96,69 @@ public class ChangeGrade
 		
 		return List;
 	}
-
+	
+	private static ArrayList<Student> classChange(ArrayList<Student> List) {
+		// TODO Auto-generated method stub
+		int Student = 0;
+		
+		printClassList(List);
+		
+		System.out.println("Enter the student number whose class you want to change.");
+		Scanner userInput = new Scanner(System.in);
+		Student = userInput.nextInt();
+		
+		System.out.println("Which class would you like to transfer the student out of?");
+		System.out.println("Period 1:" + " " + List.get(Student).getClass1());
+		System.out.println("Period 2:" + " " + List.get(Student).getClass2());
+		System.out.println("Period 3:" + " " + List.get(Student).getClass3());
+		Scanner Input1 = new Scanner(System.in);
+		int out = Input1.nextInt();
+		
+		System.out.println("Which class would you like to transfer the student into?");
+		System.out.println("Period 1:" + " " + List.get(Student).getClass1());
+		System.out.println("Period 2:" + " " + List.get(Student).getClass2());
+		System.out.println("Period 3:" + " " + List.get(Student).getClass3());
+		Scanner Input11 = new Scanner(System.in);
+		int in = Input11.nextInt();
+		
+		if (out==1 && in==2) {
+			String hold=List.get(Student).getClass2();
+			List.get(Student).setC2(List.get(Student).getClass1());
+			List.get(Student).setC1(hold);
+		}
+		if (out==1 && in==3) {
+			String hold=List.get(Student).getClass3();
+			List.get(Student).setC3(List.get(Student).getClass1());
+			List.get(Student).setC1(hold);
+		}
+		if (out==2 && in==1) {
+			String hold=List.get(Student).getClass1();
+			List.get(Student).setC1(List.get(Student).getClass2());
+			List.get(Student).setC2(hold);
+		}
+		if (out==3 && in==1) {
+			String hold=List.get(Student).getClass3();
+			List.get(Student).setC3(List.get(Student).getClass1());
+			List.get(Student).setC1(hold);
+		}
+		if (out==2 && in==3) {
+			String hold=List.get(Student).getClass3();
+			List.get(Student).setC3(List.get(Student).getClass2());
+			List.get(Student).setC2(hold);
+		}
+		if (out==3 && in==2) {
+			String hold=List.get(Student).getClass3();
+			List.get(Student).setC3(List.get(Student).getClass2());
+			List.get(Student).setC2(hold);
+		}
+		System.out.println("New schedule: ");
+		System.out.println("Period 1: "+List.get(Student).getClass1());
+		System.out.println("Period 2: "+ List.get(Student).getClass2());
+		System.out.println("Period 3: "+ List.get(Student).getClass3());
+		
+		return List;
 	}
 	
+
+	}
 
