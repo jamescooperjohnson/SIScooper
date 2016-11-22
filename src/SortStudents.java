@@ -32,6 +32,7 @@ public class SortStudents
 			else if (choice == 3)
 		    {
 				
+				System.out.println();
 				System.out.println("Sorted by Class 1:");
 				System.out.println();
 				Collections.sort(List, new sortbyClass());
