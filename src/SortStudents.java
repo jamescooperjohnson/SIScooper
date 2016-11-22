@@ -31,7 +31,20 @@ public class SortStudents
 			}
 			else if (choice == 3)
 		    {
+				
+				System.out.println("Sorted by Class 1:");
+				System.out.println();
 				Collections.sort(List, new sortbyClass());
+				ChangeGrade.pList(List);
+				System.out.println();
+				System.out.println("Sorted by Class 2:");
+				System.out.println();
+				Collections.sort(List, new sortbyClass2());
+				ChangeGrade.pList(List);
+				System.out.println();
+				System.out.println("Sorted by Class 3:");
+				System.out.println();
+				Collections.sort(List, new sortbyClass3());
 				ChangeGrade.pList(List);
 			}
 			
